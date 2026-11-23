@@ -1,0 +1,81 @@
+{
+  "enabled": {
+    "description": "启用插件",
+    "type": "bool",
+    "default": true
+  },
+  "prompt_guard_enabled": {
+    "description": "生成前注入表达禁忌",
+    "hint": "在 system prompt 末尾加一段“不要用这些口癖/套话”的提醒。",
+    "type": "bool",
+    "default": true
+  },
+  "guard_prompt": {
+    "description": "自定义表达禁忌",
+    "hint": "留空使用内置文案。",
+    "type": "text",
+    "default": ""
+  },
+  "clean_llm_response": {
+    "description": "清理 LLMResponse 正文",
+    "hint": "在回复入库/装饰之前先清一遍，避免八股进入历史。",
+    "type": "bool",
+    "default": true
+  },
+  "clean_result_chain": {
+    "description": "清理最终发送的消息链",
+    "hint": "在 on_decorating_result 阶段清理 Plain 文本，兼容分段发送。",
+    "type": "bool",
+    "default": true
+  },
+  "enable_ds_yubagu": {
+    "description": "拦截 DS/鱼八股",
+    "hint": "我记下了/这句话稳/比之前的都重/睡吧我守着/你掂量 这类。",
+    "type": "bool",
+    "default": true
+  },
+  "enable_ai_transitions": {
+    "description": "清理 AI 套话和过渡词",
+    "hint": "首先/其次/最后、综上所述、值得注意的是、作为一个AI、希望这对你有帮助 等。",
+    "type": "bool",
+    "default": true
+  },
+  "enable_short_cut": {
+    "description": "硬切整句直接删",
+    "hint": "好/行/行吧/你定/我不理/我不嫌 这类只有整句恰好等于才删，不会误伤“好，我知道了”。",
+    "type": "bool",
+    "default": true
+  },
+  "enable_fiction_cliches": {
+    "description": "清理小说/角色扮演八股",
+    "hint": "嘴角勾起弧度、倒吸一口凉气、眼中闪过一丝、空气凝固 等；日常聊天建议关。",
+    "type": "bool",
+    "default": false
+  },
+  "enable_rhetoric_patterns": {
+    "description": "命中“不是……而是……”整句删除",
+    "hint": "比较激进，可能误伤正常转折；默认关。",
+    "type": "bool",
+    "default": false
+  },
+  "fallback_reply": {
+    "description": "整条都被清空时的兜底",
+    "hint": "默认避免又变成单字硬切。",
+    "type": "string",
+    "default": "嗯，我在听。"
+  },
+  "extra_phrases": {
+    "description": "额外硬拦截短语",
+    "hint": "一行一条；命中后按句首/句尾/整句规则清理。",
+    "type": "list",
+    "items": {
+      "type": "string"
+    },
+    "default": []
+  },
+  "log_hits": {
+    "description": "在日志里记录命中",
+    "type": "bool",
+    "default": false
+  }
+}
