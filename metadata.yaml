@@ -4,3 +4,5 @@ description: 拦截绝大部分ai鱼八股现象和常见 AI 套话：生成前�
 author: sallve
 version: 1.0.0
 astrbot_version: ">=4.0"
+category: 工具
+support_platforms:astrbot
