@@ -1,6 +1,6 @@
 name: astrbot_plugin_ai_yubagu_filter
-display_name: AI 八股过滤器
-description: 拦截 DS/鱼八股和常见 AI 套话：生成前给模型表达禁忌，输出后清理固定口癖与八股句式。
-author: local
+display_name: 自动去除鱼八股
+description: 拦截绝大部分ai鱼八股现象和常见 AI 套话：生成前给模型表达禁忌，输出后清理固定口癖与八股句式。
+author: sallve
 version: 1.0.0
 astrbot_version: ">=4.0"
